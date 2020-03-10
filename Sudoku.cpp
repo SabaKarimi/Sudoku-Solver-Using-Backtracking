@@ -11,7 +11,7 @@ class Board{
 		bool checkSubgrid(int,int,int);
 		bool isSafe(int,int,int );
 		bool findUnassignedLocation(int& ,int&);
-		void printGrid();
+		void printBoard();
 		bool solveSudoku();
 };
 Board :: Board(){ //constructs an empty board
@@ -82,7 +82,7 @@ bool Board :: findUnassignedLocation(int &row,int &col){ // finds any unassigned
 	}
 	return false;
 }
-void Board :: printGrid(){ // prints the Suduko Board
+void Board :: printBoard(){ // prints the Suduko Board
 	for(int i=0;i<9;i++){
 		for(int j = 0;j<9;j++)
 			cout<<grid[i][j]<<" ";
@@ -111,7 +111,7 @@ int main(){
 	if(b.valid()){
 		if(b.solveSudoku()){
 			cout<<"The Solution for the given Sudoku is:\n";
-			b.printGrid();
+			b.printBoard();
 		}
 		else{
 			cout<<"No Solution exists for the entered Sudoku";
