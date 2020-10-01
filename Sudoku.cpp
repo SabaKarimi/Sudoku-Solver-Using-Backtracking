@@ -1,4 +1,5 @@
 //sky is the limit
+// backtracking
 #include<bits/stdc++.h>
 using namespace std;
 class Board{
